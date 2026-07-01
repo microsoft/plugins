@@ -1,6 +1,6 @@
 ---
 title: Grounded answers from your org (and see how)
-description: Talk to and observe a live agent with real org context via Work IQ — and inspect exactly what it grounded on.
+description: Ask a live agent real org questions and inspect what it grounded on.
 draft: true
 sidebar:
   order: 5
@@ -9,69 +9,20 @@ sidebar:
     variant: caution
 ---
 
-> 🚧 **Placeholder.** Fill in the steps and capture real output before removing `draft: true`.
+Goal: get answers from real org context and see the grounding.
 
-## The aha
+Aha: the answer cites real data and the retrieval is inspectable.
 
-> _"It answered with my company's real data, and I can see exactly what it grounded on."_
+At a glance: `wiqd agent ask -q "…"` / `wiqd agent monitor` → `wiqd agent list`.
 
-Retrieval you can _inspect_ is what makes people believe the output.
+Prereqs:
+- a provisioned agent with Work IQ access
 
-## Recipe at a glance
+Steps:
+1. Run `wiqd agent ask -q "…"`.
+2. Run `wiqd agent monitor`.
+3. Run `wiqd agent list`.
 
-| | |
-|---|---|
-| **Outcome** | A live agent answering from real org context, with its retrieval visible. |
-| **Core capability** | Talk to / observe a live agent with real org context (Work IQ) and inspect its retrieval + developer info. |
-| **Commands** | `wiqd agent ask -q "…"` / `wiqd agent monitor` → `wiqd agent list` |
-| **Level** | Intermediate |
-| **Time** | _(TODO: confirm)_ |
+Verify: the answer uses org data and the grounding is visible.
 
-## Prerequisites
-
-<!-- TODO: confirm -->
-- [ ] A provisioned agent with access to org context (Work IQ)
-
-## Steps
-
-### Step 1 — Ask a grounded question
-
-```bash
-wiqd agent ask -q "…"
-```
-
-<!-- TODO: describe the answer plus the retrieval/grounding info returned -->
-
-**Expected output:** <!-- TODO -->
-
-### Step 2 — Monitor the live agent (Work IQ)
-
-```bash
-wiqd agent monitor
-```
-
-<!-- TODO: describe what monitoring surfaces -->
-
-**Expected output:** <!-- TODO -->
-
-### Step 3 — Inspect developer info
-
-```bash
-wiqd agent list
-```
-
-<!-- TODO: describe the developer info shown per agent -->
-
-**Expected output:** <!-- TODO -->
-
-## Verify
-
-<!-- TODO: confirm the answer cites real org data and the grounding is inspectable -->
-
-## Troubleshooting
-
-<!-- TODO -->
-
-## Next steps
-
-- Distribute it: `wiqd agent share` / `wiqd agent publish` _(Recipe 6 — coming soon)_
+Next: distribute it with `wiqd agent share` or `wiqd agent publish`.

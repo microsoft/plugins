@@ -1,6 +1,6 @@
 ---
 title: "Give your agent real powers: API → action"
-description: Turn an OpenAPI spec into a working plugin action, with auth wired in, so your agent stops talking and starts doing.
+description: Turn an OpenAPI spec into a working plugin action with auth.
 draft: true
 sidebar:
   order: 2
@@ -9,62 +9,22 @@ sidebar:
     variant: caution
 ---
 
-> 🚧 **Placeholder.** Fill in the steps and capture real output before removing `draft: true`.
+Goal: make the agent call a real API.
 
-## The aha
+Aha: the agent stops talking and does something useful.
 
-> _"My agent stopped just talking and actually did something."_
+At a glance: `wiqd agent add action --openapi-spec ./api.yaml`.
+For secured APIs, also run `wiqd agent add auth`.
 
-Calls my API, books the thing, reads the system of record. This is where a toy
-becomes a tool.
+Prereqs:
+- completed [Zero to agent](/cookbooks/zero-to-agent)
+- an OpenAPI spec at `./api.yaml`
+- credentials if the API is secured
 
-## Recipe at a glance
+Steps:
+1. Run `wiqd agent add action --openapi-spec ./api.yaml`.
+2. If needed, run `wiqd agent add auth`.
 
-| | |
-|---|---|
-| **Outcome** | Your agent gains a real action backed by your API. |
-| **Core capability** | Turn an OpenAPI spec into a working plugin action with auth wired in. |
-| **Commands** | `wiqd agent add action --openapi-spec ./api.yaml` (+ `wiqd agent add auth` for secured APIs) |
-| **Level** | Intermediate |
-| **Time** | _(TODO: confirm)_ |
+Verify: prompt the agent to call the API and confirm the request succeeds.
 
-## Prerequisites
-
-<!-- TODO: confirm -->
-- [ ] Completed [Zero to agent](/cookbooks/zero-to-agent)
-- [ ] An OpenAPI spec (`./api.yaml`) for the API you want to call
-- [ ] Credentials / auth details if the API is secured
-
-## Steps
-
-### Step 1 — Add the action from your spec
-
-```bash
-wiqd agent add action --openapi-spec ./api.yaml
-```
-
-<!-- TODO: describe how operations map to actions -->
-
-**Expected output:** <!-- TODO -->
-
-### Step 2 — Wire in auth (secured APIs)
-
-```bash
-wiqd agent add auth
-```
-
-<!-- TODO: describe supported auth types and prompts -->
-
-**Expected output:** <!-- TODO -->
-
-## Verify
-
-<!-- TODO: prompt the agent to invoke the action and confirm the call succeeds -->
-
-## Troubleshooting
-
-<!-- TODO -->
-
-## Next steps
-
-- [Ship-safe: validate offline →](/cookbooks/validate-offline)
+Next: [Ship-safe: validate offline](/cookbooks/validate-offline)

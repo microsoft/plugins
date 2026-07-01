@@ -1,15 +1,9 @@
 # Recipe Template
 
-## Title
+Title: 
+Goal: 
 
-Describe the recipe name here.
-
-## Goal
-
-Describe the desired outcome.
-
-## Steps
-
-1. Step one.
-2. Step two.
-3. Step three.
+Steps:
+1. 
+2. 
+3. 

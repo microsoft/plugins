@@ -1,6 +1,6 @@
 ---
 title: "Prove it's good: the evals loop"
-description: Generate, run, and score evals against your agent so you can improve it against a number — not a vibe.
+description: Generate, run, and score evals so improvement is measured, not guessed.
 draft: true
 sidebar:
   order: 4
@@ -9,66 +9,20 @@ sidebar:
     variant: caution
 ---
 
-> 🚧 **Placeholder.** Fill in the steps and capture real output before removing `draft: true`.
+Goal: improve the agent against a score.
 
-## The aha
+Aha: prompt changes move a number, not a vibe.
 
-> _"I can improve my agent against a number, not a vibe."_
+At a glance: `wiqd agent eval init` → `wiqd agent eval` → compare runs.
 
-See that a prompt change actually moved grounding/quality. This is what
-separates a demo from a product people trust.
+Prereqs:
+- a working agent, ideally with an action from [Give your agent real powers](/cookbooks/add-api-action)
 
-## Recipe at a glance
+Steps:
+1. Run `wiqd agent eval init`.
+2. Run `wiqd agent eval`.
+3. Compare the results across runs.
 
-| | |
-|---|---|
-| **Outcome** | A repeatable score for your agent that moves when you improve it. |
-| **Core capability** | Generate, run, and score evals against your agent. |
-| **Commands** | `wiqd agent eval init` → `wiqd agent eval` → analyze / compare runs |
-| **Level** | Advanced |
-| **Time** | _(TODO: confirm)_ |
+Verify: make a change, rerun, and confirm the score moves.
 
-## Prerequisites
-
-<!-- TODO: confirm -->
-- [ ] A working agent (ideally one with an action from [Recipe 2](/cookbooks/add-api-action))
-
-## Steps
-
-### Step 1 — Initialize evals
-
-```bash
-wiqd agent eval init
-```
-
-<!-- TODO: describe what gets generated (eval set, scaffolding) -->
-
-**Expected output:** <!-- TODO -->
-
-### Step 2 — Run the evals
-
-```bash
-wiqd agent eval
-```
-
-<!-- TODO: describe scoring dimensions (e.g. grounding, quality) -->
-
-**Expected output:** <!-- TODO: capture a sample score report -->
-
-### Step 3 — Analyze / compare runs
-
-<!-- TODO: document the analyze / compare workflow and how to read a delta between runs -->
-
-**Expected output:** <!-- TODO -->
-
-## Verify
-
-<!-- TODO: make a prompt change, re-run, and confirm the score moved -->
-
-## Troubleshooting
-
-<!-- TODO -->
-
-## Next steps
-
-- [Grounded answers from your org →](/cookbooks/grounded-answers)
+Next: [Grounded answers from your org](/cookbooks/grounded-answers)
