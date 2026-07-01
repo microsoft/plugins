@@ -9,20 +9,46 @@ sidebar:
     variant: caution
 ---
 
-Goal: get answers from real org context and see the grounding.
 
-Aha: the answer cites real data and the retrieval is inspectable.
+Get answers from real org context — and see the grounding.
 
-At a glance: `wiqd agent ask -q "…"` / `wiqd agent monitor` → `wiqd agent list`.
+> **Aha:** the answer cites real data and the retrieval is inspectable.
 
-Prereqs:
+## Prerequisites
+
+<!-- TODO: confirm -->
 - a provisioned agent with Work IQ access
 
-Steps:
-1. Run `wiqd agent ask -q "…"`.
-2. Run `wiqd agent monitor`.
-3. Run `wiqd agent list`.
+## Steps
 
-Verify: the answer uses org data and the grounding is visible.
+### 1. Ask a grounded question
 
-Next: distribute it with `wiqd agent share` or `wiqd agent publish`.
+```bash
+wiqd agent ask -q "…"
+```
+
+**Expected output:** <!-- TODO: the answer plus grounding info -->
+
+### 2. Monitor the live agent (Work IQ)
+
+```bash
+wiqd agent monitor
+```
+
+**Expected output:** <!-- TODO -->
+
+### 3. Inspect developer info
+
+```bash
+wiqd agent list
+```
+
+**Expected output:** <!-- TODO -->
+
+## Verify
+
+The answer uses org data and the grounding is visible.
+
+## Next steps
+
+- Distribute it with `wiqd agent share` or `wiqd agent publish` _(Recipe 6 — coming soon)_

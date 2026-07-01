@@ -9,21 +9,46 @@ sidebar:
     variant: caution
 ---
 
-Goal: empty folder to live Copilot agent.
+Go from an empty folder to a live Copilot agent.
 
-Aha: you can chat with your own agent in under a minute.
+> **Aha:** chat with your own agent in under a minute.
 
-At a glance: `wiqd agent create` → `wiqd agent provision --env dev` → `wiqd agent open`.
+## Prerequisites
 
-Prereqs:
+<!-- TODO: confirm -->
 - wiqd installed and signed in
 - permission to provision to a dev environment
 
-Steps:
-1. Run `wiqd agent create`.
-2. Run `wiqd agent provision --env dev`.
-3. Run `wiqd agent open`.
+## Steps
 
-Verify: the agent opens in Copilot and answers in chat.
+### 1. Scaffold the agent
 
-Next: [Give your agent real powers](/cookbooks/add-api-action)
+```bash
+wiqd agent create
+```
+
+**Expected output:** <!-- TODO: the generated file tree -->
+
+### 2. Provision to dev
+
+```bash
+wiqd agent provision --env dev
+```
+
+**Expected output:** a share link like `https://m365.cloud.microsoft/chat/?titleId=…` <!-- TODO: full output -->
+
+### 3. Open it in Copilot
+
+```bash
+wiqd agent open
+```
+
+**Expected output:** <!-- TODO -->
+
+## Verify
+
+The agent opens in Copilot and answers in chat.
+
+## Next steps
+
+- [Give your agent real powers →](/cookbooks/add-api-action)

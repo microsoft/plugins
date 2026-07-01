@@ -9,22 +9,40 @@ sidebar:
     variant: caution
 ---
 
-Goal: make the agent call a real API.
 
-Aha: the agent stops talking and does something useful.
+Make the agent call a real API.
 
-At a glance: `wiqd agent add action --openapi-spec ./api.yaml`.
-For secured APIs, also run `wiqd agent add auth`.
+> **Aha:** the agent stops talking and does something useful.
 
-Prereqs:
+## Prerequisites
+
+<!-- TODO: confirm -->
 - completed [Zero to agent](/cookbooks/zero-to-agent)
 - an OpenAPI spec at `./api.yaml`
 - credentials if the API is secured
 
-Steps:
-1. Run `wiqd agent add action --openapi-spec ./api.yaml`.
-2. If needed, run `wiqd agent add auth`.
+## Steps
 
-Verify: prompt the agent to call the API and confirm the request succeeds.
+### 1. Add the action from your spec
 
-Next: [Ship-safe: validate offline](/cookbooks/validate-offline)
+```bash
+wiqd agent add action --openapi-spec ./api.yaml
+```
+
+**Expected output:** <!-- TODO -->
+
+### 2. Wire in auth (secured APIs)
+
+```bash
+wiqd agent add auth
+```
+
+**Expected output:** <!-- TODO -->
+
+## Verify
+
+Prompt the agent to call the API and confirm the request succeeds.
+
+## Next steps
+
+- [Ship-safe: validate offline →](/cookbooks/validate-offline)

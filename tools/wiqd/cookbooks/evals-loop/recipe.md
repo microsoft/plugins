@@ -9,20 +9,42 @@ sidebar:
     variant: caution
 ---
 
-Goal: improve the agent against a score.
 
-Aha: prompt changes move a number, not a vibe.
+Improve the agent against a score, not a vibe.
 
-At a glance: `wiqd agent eval init` → `wiqd agent eval` → compare runs.
+> **Aha:** prompt changes move a number, not a feeling.
 
-Prereqs:
+## Prerequisites
+
+<!-- TODO: confirm -->
 - a working agent, ideally with an action from [Give your agent real powers](/cookbooks/add-api-action)
 
-Steps:
-1. Run `wiqd agent eval init`.
-2. Run `wiqd agent eval`.
-3. Compare the results across runs.
+## Steps
 
-Verify: make a change, rerun, and confirm the score moves.
+### 1. Initialize evals
 
-Next: [Grounded answers from your org](/cookbooks/grounded-answers)
+```bash
+wiqd agent eval init
+```
+
+**Expected output:** <!-- TODO -->
+
+### 2. Run the evals
+
+```bash
+wiqd agent eval
+```
+
+**Expected output:** <!-- TODO: a sample score report -->
+
+### 3. Compare runs
+
+<!-- TODO: how to read the delta between runs -->
+
+## Verify
+
+Make a change, rerun, and confirm the score moves.
+
+## Next steps
+
+- [Grounded answers from your org →](/cookbooks/grounded-answers)

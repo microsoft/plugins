@@ -9,18 +9,29 @@ sidebar:
     variant: caution
 ---
 
-Goal: catch shipping issues before review.
+Catch shipping issues before store review.
 
-Aha: the rulebook flags failures locally, without waiting for store review.
+> **Aha:** the rulebook flags failures locally, without waiting for store review.
 
-At a glance: `wiqd agent validate`.
+## Prerequisites
 
-Prereqs:
+<!-- TODO: confirm -->
 - an agent project to validate
 
-Steps:
-1. Run `wiqd agent validate`.
+## Steps
 
-Verify: confirm a clean run or inspect the reported issues.
+### 1. Validate against the rulebook
 
-Next: [Prove it's good: the evals loop](/cookbooks/evals-loop)
+```bash
+wiqd agent validate
+```
+
+**Expected output:** <!-- TODO: a sample pass/fail report -->
+
+## Verify
+
+Confirm a clean run, or inspect the reported issues.
+
+## Next steps
+
+- [Prove it's good: the evals loop →](/cookbooks/evals-loop)
