@@ -12,9 +12,6 @@ sidebar:
 wiqd cookbooks are short, end-to-end recipes built around one clear outcome:
 **build it → make it do something → make it safe → make it good → make it grounded.**
 
-> **Agents:** read [`/catalog.json`](/catalog.json) for the machine-readable
-> index and [`/llms.txt`](/llms.txt) for orientation before crawling these pages.
-
 1. [Zero to agent, live in Copilot](/cookbooks/zero-to-agent) — `wiqd agent create` → `provision` → `open`
 2. [Give your agent real powers](/cookbooks/add-api-action) — `wiqd agent add action` (+ `add auth`)
 3. [Ship-safe: validate offline](/cookbooks/validate-offline) — `wiqd agent validate`
