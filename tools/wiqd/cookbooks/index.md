@@ -89,19 +89,12 @@ This checks your environment for common issues (Node version, auth status, CLI v
 
 | # | Recipe | What it does |
 |---|--------|--------------|
-| 1 | [Zero to agent, live in Copilot](/cookbooks/zero-to-agent) | Scaffold, provision, and open your first agent |
-| 2 | [Give your agent real powers](/cookbooks/add-api-action) | Add an API action with authentication |
-| 3 | [Ship-safe: validate offline](/cookbooks/validate-offline) | Catch issues before you provision |
-| 4 | [Prove it's good: the evals loop](/cookbooks/evals-loop) | Generate evals, run them, compare results |
-| 5 | [Grounded answers from your org](/cookbooks/grounded-answers) | Connect your agent to organizational knowledge |
-| 6 | [Translator agent](/cookbooks/translator-agent) | Translate text into any language |
-| 7 | [Photobooth agent](/cookbooks/photobooth-agent) | Apply effects and create photobooth-style image composites |
-| 8 | [Mind Your Language agent](/cookbooks/mind-your-language) | Tone coach that rewrites passive-aggressive text |
-| 9 | [Zava Insurance agent (MCP)](/cookbooks/zava-insurance) | Connect to an MCP server for live insurance data |
-| 10 | [Demo Planning agent](/cookbooks/demo-planning) | Plan demos, workshops, hackathons, and presentations |
+| 1 | [Zero to agent, live in Copilot](./zero-to-agent/recipe.md) | Scaffold, provision, and open your first agent |
+| 2 | [Translator agent](./translator-agent/recipe.md) | Translate text into any language |
+| 3 | [Photobooth agent](./photobooth-agent/recipe.md) | Apply effects and create photobooth-style image composites |
+| 4 | [Mind Your Language agent](./mind-your-language/recipe.md) | Tone coach that rewrites passive-aggressive text |
+| 5 | [Zava Insurance agent (MCP)](./zava-insurance/recipe.md) | Connect to an MCP server for live insurance data |
+| 6 | [Demo Planning agent](./demo-planning/recipe.md) | Plan demos, workshops, hackathons, and presentations |
 
-> Recipes 1–5 use `wiqd` CLI commands. Recipes 6–10 use GitHub Copilot CLI prompts (`--agent wiqd:wiqd`).
+> All recipes use GitHub Copilot CLI prompts (`--agent wiqd:wiqd`) and `wiqd` CLI commands.
 
-**Rollout:** ship #1 first; pair #3 and #4 closely.
-
-**Coming next:** distribute it with `wiqd agent share` or `wiqd agent publish`.
