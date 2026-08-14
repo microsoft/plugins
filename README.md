@@ -12,7 +12,7 @@ Sample recipes for building M365 Copilot declarative agents using the [wiqd CLI]
 
 ## Cookbooks
 
-Browse the full list of recipes in the [wiqd Cookbooks index](tools/wiqd/cookbooks/index.md).
+Browse the full list of recipes in the [wiqd Cookbooks index](tools/wiqd/cookbooks/README.md).
 
 ## Disclaimers
 
