@@ -25,7 +25,11 @@ Go from an empty folder to a live Copilot agent that greets users with a warm, i
 ### 1. Create a project folder
 
 ```
-copilot -i "create a new folder called hello-wiqd and open it" --agent wiqd:wiqd
+copilot -i "create a new folder called hello-wiqd"
+```
+
+```
+/cwd hello-wiqd
 ```
 
 ### 2. Scaffold the agent

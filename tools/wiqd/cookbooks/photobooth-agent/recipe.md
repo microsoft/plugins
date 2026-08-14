@@ -25,7 +25,11 @@ Build a Copilot agent that takes user-uploaded images, applies fun modifications
 ### 1. Create a project folder
 
 ```
-copilot -i "create a new folder called photobooth-agent and open it" --agent wiqd:wiqd
+copilot -i "create a new folder called photobooth-agent"
+```
+
+```
+/cwd photobooth-agent
 ```
 
 ### 2. Scaffold the agent

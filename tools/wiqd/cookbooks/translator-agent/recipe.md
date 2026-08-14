@@ -25,7 +25,11 @@ Build a Copilot agent that translates user input into any requested language.
 ### 1. Create a project folder
 
 ```
-copilot -i "create a new folder called translator-agent and open it" --agent wiqd:wiqd
+copilot -i "create a new folder called translator-agent"
+```
+
+```
+/cwd translator-agent
 ```
 
 ### 2. Scaffold the agent
