@@ -87,21 +87,20 @@ This checks your environment for common issues (Node version, auth status, CLI v
 
 ## Recipes
 
-### Core workflow
+| # | Recipe | What it does |
+|---|--------|--------------|
+| 1 | [Zero to agent, live in Copilot](/cookbooks/zero-to-agent) | Scaffold, provision, and open your first agent |
+| 2 | [Give your agent real powers](/cookbooks/add-api-action) | Add an API action with authentication |
+| 3 | [Ship-safe: validate offline](/cookbooks/validate-offline) | Catch issues before you provision |
+| 4 | [Prove it's good: the evals loop](/cookbooks/evals-loop) | Generate evals, run them, compare results |
+| 5 | [Grounded answers from your org](/cookbooks/grounded-answers) | Connect your agent to organizational knowledge |
+| 6 | [Translator agent](/cookbooks/translator-agent) | Translate text into any language |
+| 7 | [Photobooth agent](/cookbooks/photobooth-agent) | Apply effects and create photobooth-style image composites |
+| 8 | [Mind Your Language agent](/cookbooks/mind-your-language) | Tone coach that rewrites passive-aggressive text |
+| 9 | [Zava Insurance agent (MCP)](/cookbooks/zava-insurance) | Connect to an MCP server for live insurance data |
+| 10 | [Demo Planning agent](/cookbooks/demo-planning) | Plan demos, workshops, hackathons, and presentations |
 
-1. [Zero to agent, live in Copilot](/cookbooks/zero-to-agent) — scaffold, provision, and open your first agent
-2. [Give your agent real powers](/cookbooks/add-api-action) — add an API action with authentication
-3. [Ship-safe: validate offline](/cookbooks/validate-offline) — catch issues before you provision
-4. [Prove it's good: the evals loop](/cookbooks/evals-loop) — generate evals, run them, compare results
-5. [Grounded answers from your org](/cookbooks/grounded-answers) — connect your agent to organizational knowledge
-
-### Prompt-based agents (requires GitHub Copilot CLI)
-
-6. [Translator agent](/cookbooks/translator-agent) — translate text into any language
-7. [Photobooth agent](/cookbooks/photobooth-agent) — apply effects and create photobooth-style image composites
-8. [Mind Your Language agent](/cookbooks/mind-your-language) — tone coach that rewrites passive-aggressive text
-9. [Zava Insurance agent (MCP)](/cookbooks/zava-insurance) — connect to an MCP server for live insurance data
-10. [Demo Planning agent](/cookbooks/demo-planning) — plan demos, workshops, hackathons, and presentations
+> Recipes 1–5 use `wiqd` CLI commands. Recipes 6–10 use GitHub Copilot CLI prompts (`--agent wiqd:wiqd`).
 
 **Rollout:** ship #1 first; pair #3 and #4 closely.
 
