@@ -89,12 +89,12 @@ This checks your environment for common issues (Node version, auth status, CLI v
 
 | # | Recipe | What it does |
 |---|--------|--------------|
-| 1 | [Zero to agent, live in Copilot](./zero-to-agent/recipe.md) | Scaffold, provision, and open your first agent |
-| 2 | [Translator agent](./translator-agent/recipe.md) | Translate text into any language |
-| 3 | [Photobooth agent](./photobooth-agent/recipe.md) | Apply effects and create photobooth-style image composites |
-| 4 | [Mind Your Language agent](./mind-your-language/recipe.md) | Tone coach that rewrites passive-aggressive text |
-| 5 | [Zava Insurance agent (MCP)](./zava-insurance/recipe.md) | Connect to an MCP server for live insurance data |
-| 6 | [Demo Planning agent](./demo-planning/recipe.md) | Plan demos, workshops, hackathons, and presentations |
+| 1 | [Zero to agent, live in Copilot](./zero-to-agent/README.md) | Scaffold, provision, and open your first agent |
+| 2 | [Translator agent](./translator-agent/README.md) | Translate text into any language |
+| 3 | [Photobooth agent](./photobooth-agent/README.md) | Apply effects and create photobooth-style image composites |
+| 4 | [Mind Your Language agent](./mind-your-language/README.md) | Tone coach that rewrites passive-aggressive text |
+| 5 | [Zava Insurance agent (MCP)](./zava-insurance/README.md) | Connect to an MCP server for live insurance data |
+| 6 | [Demo Planning agent](./demo-planning/README.md) | Plan demos, workshops, hackathons, and presentations |
 
 > All recipes use GitHub Copilot CLI prompts (`--agent wiqd:wiqd`) and `wiqd` CLI commands.
 
