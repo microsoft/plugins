@@ -3,7 +3,7 @@
 Build and open a Microsoft 365 Copilot agent from an empty folder. This README is organized like a notebook: run one cell at a time, confirm its checkpoint, and then continue.
 
 > [!NOTE]
-> Markdown cannot execute commands directly. Use the copy button on each code block, paste the command into a terminal, and keep the same Copilot session open for Steps 3 and 4.
+> Markdown cannot execute commands directly. Use the copy button on each code block, paste the command into a terminal, and keep the same Copilot session open for all remaining steps.
 
 ## Before you start
 
@@ -78,34 +78,48 @@ Review and approve the file changes Copilot proposes.
 
 **Checkpoint:** the current directory contains a new agent project with manifest and instruction files.
 
-Exit the Copilot session when scaffolding is complete:
-
-```text
-/exit
-```
+Keep this Copilot session open for the remaining steps.
 
 ## Run the agent
 
-### Step 5: Validate locally
+### Step 5: Move into the agent project
 
-```bash
-wiqd agent validate
+Copilot reports the path of the project it created. Move the current session into that project root:
+
+```text
+/cwd <path-to-new-agent-project>
+```
+
+Replace the placeholder with the path Copilot reported.
+
+**Checkpoint:** the current directory contains the agent's `appPackage` directory and lifecycle configuration file.
+
+### Step 6: Validate locally
+
+Enter this prompt in the same Copilot session:
+
+```text
+Validate the agent with wiqd. If validation reports errors, explain them and help me fix them before continuing.
 ```
 
 **Checkpoint:** validation completes without errors. Fix any reported errors before continuing.
 
-### Step 6: Provision to dev
+### Step 7: Provision to dev
 
-```bash
-wiqd agent provision --env dev
+Enter this prompt in the same Copilot session:
+
+```text
+Provision the agent to the dev environment with wiqd.
 ```
 
 **Checkpoint:** provisioning succeeds and returns a Microsoft 365 Copilot share link.
 
-### Step 7: Open in Copilot
+### Step 8: Open in Copilot
 
-```bash
-wiqd agent open
+Enter this prompt in the same Copilot session:
+
+```text
+Open the provisioned agent in Microsoft 365 Copilot with wiqd.
 ```
 
 **Checkpoint:** the Hello WIQD agent opens in Microsoft 365 Copilot.
