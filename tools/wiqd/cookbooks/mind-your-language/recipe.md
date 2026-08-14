@@ -25,10 +25,11 @@ Build a Copilot agent that coaches users toward kinder communication by detectin
 ### 1. Create a project folder
 
 ```
-copilot -i "create a new folder called mind-your-language and open it" 
+copilot -i "create a new folder called mind-your-language"
 ```
 
-### 2. Scaffold the agent
+```
+/cwd mind-your-language
 
 ```
 copilot -i "create a new declarative agent called Mind Your Language that acts as a tone coach. When a user pastes text, the agent should detect passive-aggressive, sarcastic, or unkind phrasing and rewrite it in a kinder, more constructive tone. It should explain what was changed and why, and offer alternative phrasings ranked from most direct to most gentle." --agent wiqd:wiqd

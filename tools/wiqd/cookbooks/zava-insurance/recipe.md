@@ -26,7 +26,11 @@ Build a Copilot agent that connects to the Zava Insurance MCP server to handle i
 ### 1. Create a project folder
 
 ```
-copilot -i "create a new folder called zava-insurance and open it" --agent wiqd:wiqd
+copilot -i "create a new folder called zava-insurance"
+```
+
+```
+/cwd zava-insurance
 ```
 
 ### 2. Scaffold the agent

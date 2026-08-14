@@ -25,7 +25,11 @@ Build a Copilot agent that helps users plan professional demos, workshops, hacka
 ### 1. Create a project folder
 
 ```
-copilot -i "create a new folder called demo-planning and open it" --agent wiqd:wiqd
+copilot -i "create a new folder called demo-planning"
+```
+
+```
+/cwd demo-planning
 ```
 
 ### 2. Scaffold the agent
