@@ -133,6 +133,8 @@ rm -rf zava-insurance
 
 Deleting the local folder does not remove provisioned resources.
 
+<img src="https://m365-visitor-stats.azurewebsites.net/copilot-camp/cookbooks/zava-insurance" />
+
 ---
 
 Return to the [cookbook index](../README.md).

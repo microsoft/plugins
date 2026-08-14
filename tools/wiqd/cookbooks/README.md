@@ -1,14 +1,3 @@
----
-title: wiqd Cookbooks
-description: Short end-to-end recipes for building, powering, validating, scoring, and grounding an agent.
-draft: true
-sidebar:
-  order: 0
-  badge:
-    text: Draft
-    variant: caution
----
-
 wiqd cookbooks are short, end-to-end recipes built around one clear outcome:
 **build it → make it do something → make it safe → make it good → make it grounded.**
 
@@ -98,3 +87,4 @@ This checks your environment for common issues (Node version, auth status, CLI v
 
 > All recipes use GitHub Copilot CLI prompts (`--agent wiqd:wiqd`) and `wiqd` CLI commands.
 
+<img src="https://m365-visitor-stats.azurewebsites.net/copilot-camp/cookbooks/wiqd" />

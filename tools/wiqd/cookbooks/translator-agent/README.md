@@ -128,6 +128,8 @@ rm -rf translator-agent
 
 Provisioned resources are not removed by deleting the local folder. Use the appropriate `wiqd` cleanup command for your environment if you also want to remove the provisioned agent.
 
+<img src="https://m365-visitor-stats.azurewebsites.net/copilot-camp/cookbooks/translator-agent" />
+
 ---
 
 Return to the [cookbook index](../README.md).
