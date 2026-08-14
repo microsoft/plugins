@@ -126,6 +126,8 @@ rm -rf demo-planning
 
 Deleting the local folder does not remove provisioned resources.
 
+<img src="https://m365-visitor-stats.azurewebsites.net/copilot-camp/cookbooks/demo-planning" />
+
 ---
 
 Return to the [cookbook index](../README.md).

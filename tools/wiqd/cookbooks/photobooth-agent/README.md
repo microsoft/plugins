@@ -124,6 +124,8 @@ rm -rf photobooth-agent
 
 Deleting the local folder does not remove provisioned resources.
 
+<img src="https://m365-visitor-stats.azurewebsites.net/copilot-camp/cookbooks/photobooth-agent" />
+
 ---
 
 Return to the [cookbook index](../README.md).

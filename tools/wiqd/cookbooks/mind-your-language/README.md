@@ -125,6 +125,8 @@ rm -rf mind-your-language
 
 Deleting the local folder does not remove provisioned resources.
 
+<img src="https://m365-visitor-stats.azurewebsites.net/copilot-camp/cookbooks/mind-your-language" />
+
 ---
 
 Return to the [cookbook index](../README.md).
