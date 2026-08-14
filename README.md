@@ -19,3 +19,5 @@ Browse the full list of recipes in the [wiqd Cookbooks index](tools/wiqd/cookboo
 > **wiqd is in preview.** Work IQ Dev Tools (wiqd) are currently in preview. Commands, APIs, and behaviors may change before the 1.0 release. See the [wiqd documentation](https://microsoft.github.io/wiqd/) for the latest information.
 
 > **Sample purposes only.** The agents and recipes in this repository are provided as samples for learning and demonstration purposes. They are not intended for production use. AI-generated responses may be inaccurate, incomplete, or inappropriate. Always review and validate agent behavior before sharing with end users.
+
+<img src="https://m365-visitor-stats.azurewebsites.net/copilot-camp/cookbooks" />

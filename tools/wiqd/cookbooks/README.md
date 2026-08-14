@@ -87,5 +87,4 @@ This checks your environment for common issues (Node version, auth status, CLI v
 
 > All recipes use GitHub Copilot CLI prompts (`--agent wiqd:wiqd`) and `wiqd` CLI commands.
 
-<img src="https://m365-visitor-stats.azurewebsites.net/copilot-camp/cookbooks" />
-
+<img src="https://m365-visitor-stats.azurewebsites.net/copilot-camp/cookbooks/wiqd" />
