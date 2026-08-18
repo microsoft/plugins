@@ -1,6 +1,6 @@
-# Demo Planning agent: interactive lab
+# Mind Your Language agent: interactive lab
 
-Build and open a Microsoft 365 Copilot agent that plans demos, workshops, hackathons, presentations, and customer conversations. This README is organized like a notebook: run one cell at a time, confirm its checkpoint, and then continue.
+Build and open a Microsoft 365 Copilot tone coach that rewrites passive-aggressive, sarcastic, or harsh messages. This README is organized like a notebook: run one cell at a time, confirm its checkpoint, and then continue.
 
 > [!NOTE]
 > Markdown cannot execute commands directly. Use the copy button on each code block, paste the command into a terminal, and keep the same Copilot session open for all remaining steps.
@@ -17,7 +17,7 @@ You need:
 ### Step 1: Check the environment
 
 > [!NOTE]
-> See [Getting started](../README.md#getting-started) in the cookbook README for wiqd prerequisites and installation instructions.
+> See [Getting started](../../README.md#getting-started) in the cookbook README for wiqd prerequisites and installation instructions.
 
 ```bash
 node --version
@@ -39,7 +39,7 @@ alias copilot="gh copilot"
 ### Step 2: Create the workspace
 
 ```bash
-mkdir -p demo-planning && cd demo-planning
+mkdir -p mind-your-language && cd mind-your-language
 ```
 
 ### Step 3: Start Copilot
@@ -59,7 +59,7 @@ Start with a clean conversation:
 Enter this prompt in the same Copilot session:
 
 ```text
-Create a new declarative agent called Demo Planner that helps users plan professional demos, workshops, hackathons, presentations, and customer conversations. Ask about the audience, goals, time constraints, format, and technology, then generate a structured plan with an agenda, talking points, demo scripts, fallback options, and preparation checklists.
+Create a new declarative agent called Mind Your Language that acts as a tone coach. When a user pastes text, detect passive-aggressive, sarcastic, or unkind phrasing and rewrite it in a kinder, more constructive tone. Explain what changed and why, and offer alternative phrasings ranked from most direct to most gentle. If the text is already kind, confirm that no changes are needed.
 ```
 
 Review and approve the proposed file changes.
@@ -70,13 +70,12 @@ Review and approve the proposed file changes.
 
 Confirm the generated instructions tell the agent to:
 
-- Ask about the audience, event type, duration, goals, and technology
-- Create an agenda with time allocations
-- Provide talking points and transitions
-- Include step-by-step demo actions and fallback plans
-- Produce a preparation checklist
-- Adapt depth and tone to technical, executive, or mixed audiences
-- Handle follow-up changes to the plan
+- Detect passive-aggressive, sarcastic, or harsh phrasing
+- Identify phrases that could land poorly
+- Preserve the original intent in a kinder rewrite
+- Briefly explain why each change improves the tone
+- Offer two or three alternatives from direct to gentle
+- Leave already-kind text unchanged
 
 Ask Copilot to correct any missing behavior. Keep this Copilot session open for the remaining steps.
 
@@ -126,22 +125,22 @@ Open the provisioned agent in Microsoft 365 Copilot with wiqd.
 
 | Prompt | Expected behavior |
 |---|---|
-| `Plan a 30-minute product demo for enterprise customers` | Asks for key details and returns a timed agenda |
-| `Plan a 2-hour hackathon kickoff for 50 developers` | Creates a timeline for setup, introduction, hacking, and judging |
-| `Add a 10-minute Q&A at the end` | Updates the plan and adjusts its time allocations |
+| `Per my last email, I already explained this.` | Flags the passive-aggressive phrase and offers kinder rewrites |
+| `Great job finishing that a week late.` | Detects sarcasm and suggests a constructive alternative |
+| `Thanks for your help today!` | Confirms the positive tone and suggests no changes |
 
 ## Reset the lab
 
-From the parent directory of `demo-planning`:
+From the parent directory of `mind-your-language`:
 
 ```bash
-rm -rf demo-planning
+rm -rf mind-your-language
 ```
 
 Deleting the local folder does not remove provisioned resources.
 
-<img src="https://m365-visitor-stats.azurewebsites.net/copilot-camp/cookbooks/demo-planning" />
+<img src="https://m365-visitor-stats.azurewebsites.net/copilot-camp/cookbooks/mind-your-language" />
 
 ---
 
-Return to the [cookbook index](../README.md).
+Return to the [cookbook index](../../README.md).

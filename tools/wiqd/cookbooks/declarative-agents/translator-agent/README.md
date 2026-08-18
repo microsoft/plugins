@@ -17,7 +17,7 @@ You need:
 ### Step 1: Check the environment
 
 > [!NOTE]
-> See [Getting started](../README.md#getting-started) in the cookbook README for wiqd prerequisites and installation instructions.
+> See [Getting started](../../README.md#getting-started) in the cookbook README for wiqd prerequisites and installation instructions.
 
 ```bash
 node --version
@@ -146,4 +146,4 @@ Provisioned resources are not removed by deleting the local folder. Use the appr
 
 ---
 
-Return to the [cookbook index](../README.md).
+Return to the [cookbook index](../../README.md).
