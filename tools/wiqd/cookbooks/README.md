@@ -76,14 +76,14 @@ This checks your environment for common issues (Node version, auth status, CLI v
 
 ## Recipes
 
-| # | Recipe | What it does |
-|---|--------|--------------|
-| 1 | [Zero to agent, live in Copilot](./declarative-agents/zero-to-agent/README.md) | Scaffold, provision, and open your first agent |
-| 2 | [Translator agent](./declarative-agents/translator-agent/README.md) | Translate text into any language |
-| 3 | [Photobooth agent](./declarative-agents/photobooth-agent/README.md) | Apply effects and create photobooth-style image composites |
-| 4 | [Mind Your Language agent](./declarative-agents/mind-your-language/README.md) | Tone coach that rewrites passive-aggressive text |
-| 5 | [Zava Insurance agent (MCP)](./declarative-agents/zava-insurance/README.md) | Connect to an MCP server for live insurance data |
-| 6 | [Demo Planning agent](./declarative-agents/demo-planning/README.md) | Plan demos, workshops, hackathons, and presentations |
+| # | Recipe | Type | What it does |
+|---|--------|------|--------------|
+| 1 | [Zero to agent, live in Copilot](./declarative-agents/zero-to-agent/README.md) | Declarative agent | Scaffold, provision, and open your first agent |
+| 2 | [Translator agent](./declarative-agents/translator-agent/README.md) | Declarative agent | Translate text into any language |
+| 3 | [Photobooth agent](./declarative-agents/photobooth-agent/README.md) | Declarative agent | Apply effects and create photobooth-style image composites |
+| 4 | [Mind Your Language agent](./declarative-agents/mind-your-language/README.md) | Declarative agent | Tone coach that rewrites passive-aggressive text |
+| 5 | [Zava Insurance agent (MCP)](./declarative-agents/zava-insurance/README.md) | Declarative agent | Connect to an MCP server for live insurance data |
+| 6 | [Demo Planning agent](./declarative-agents/demo-planning/README.md) | Declarative agent | Plan demos, workshops, hackathons, and presentations |
 
 > All recipes use GitHub Copilot CLI prompts (`--agent wiqd:wiqd`) and `wiqd` CLI commands.
 
