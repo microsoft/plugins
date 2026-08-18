@@ -1,6 +1,6 @@
-# Mind Your Language agent: interactive lab
+# Photobooth agent: interactive lab
 
-Build and open a Microsoft 365 Copilot tone coach that rewrites passive-aggressive, sarcastic, or harsh messages. This README is organized like a notebook: run one cell at a time, confirm its checkpoint, and then continue.
+Build and open a Microsoft 365 Copilot agent that turns uploaded images into photobooth-style composites. This README is organized like a notebook: run one cell at a time, confirm its checkpoint, and then continue.
 
 > [!NOTE]
 > Markdown cannot execute commands directly. Use the copy button on each code block, paste the command into a terminal, and keep the same Copilot session open for all remaining steps.
@@ -17,7 +17,7 @@ You need:
 ### Step 1: Check the environment
 
 > [!NOTE]
-> See [Getting started](../README.md#getting-started) in the cookbook README for wiqd prerequisites and installation instructions.
+> See [Getting started](../../README.md#getting-started) in the cookbook README for wiqd prerequisites and installation instructions.
 
 ```bash
 node --version
@@ -39,7 +39,7 @@ alias copilot="gh copilot"
 ### Step 2: Create the workspace
 
 ```bash
-mkdir -p mind-your-language && cd mind-your-language
+mkdir -p photobooth-agent && cd photobooth-agent
 ```
 
 ### Step 3: Start Copilot
@@ -59,7 +59,7 @@ Start with a clean conversation:
 Enter this prompt in the same Copilot session:
 
 ```text
-Create a new declarative agent called Mind Your Language that acts as a tone coach. When a user pastes text, detect passive-aggressive, sarcastic, or unkind phrasing and rewrite it in a kinder, more constructive tone. Explain what changed and why, and offer alternative phrasings ranked from most direct to most gentle. If the text is already kind, confirm that no changes are needed.
+Create a new declarative agent called Photobooth that accepts user-uploaded images and creates photobooth-style image responses. Apply creative filters such as black-and-white, sepia, pop-art, and sketch. Combine multiple styled versions into a single photobooth strip and return the composite image. Let users request specific styles or regenerate the result with different effects.
 ```
 
 Review and approve the proposed file changes.
@@ -70,12 +70,11 @@ Review and approve the proposed file changes.
 
 Confirm the generated instructions tell the agent to:
 
-- Detect passive-aggressive, sarcastic, or harsh phrasing
-- Identify phrases that could land poorly
-- Preserve the original intent in a kinder rewrite
-- Briefly explain why each change improves the tone
-- Offer two or three alternatives from direct to gentle
-- Leave already-kind text unchanged
+- Accept one or more user-uploaded images
+- Apply black-and-white, sepia, pop-art, and sketch styles
+- Arrange styled images in a 2-by-2 or 1-by-4 strip
+- Return the composite image directly in chat
+- Honor requests for specific styles or regeneration
 
 Ask Copilot to correct any missing behavior. Keep this Copilot session open for the remaining steps.
 
@@ -125,22 +124,22 @@ Open the provisioned agent in Microsoft 365 Copilot with wiqd.
 
 | Prompt | Expected behavior |
 |---|---|
-| `Per my last email, I already explained this.` | Flags the passive-aggressive phrase and offers kinder rewrites |
-| `Great job finishing that a week late.` | Detects sarcasm and suggests a constructive alternative |
-| `Thanks for your help today!` | Confirms the positive tone and suggests no changes |
+| Upload a photo and ask `Create a photobooth strip` | Returns four styled versions in one composite |
+| `Make it all pop-art style` | Regenerates every frame in pop-art style |
+| Upload two photos and ask `Combine these into a photobooth` | Uses both images with different effects |
 
 ## Reset the lab
 
-From the parent directory of `mind-your-language`:
+From the parent directory of `photobooth-agent`:
 
 ```bash
-rm -rf mind-your-language
+rm -rf photobooth-agent
 ```
 
 Deleting the local folder does not remove provisioned resources.
 
-<img src="https://m365-visitor-stats.azurewebsites.net/copilot-camp/cookbooks/mind-your-language" />
+<img src="https://m365-visitor-stats.azurewebsites.net/copilot-camp/cookbooks/photobooth-agent" />
 
 ---
 
-Return to the [cookbook index](../README.md).
+Return to the [cookbook index](../../README.md).
