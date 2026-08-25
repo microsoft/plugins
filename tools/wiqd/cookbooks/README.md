@@ -35,30 +35,17 @@ wiqd --version
 
 ### 3. Install GitHub Copilot CLI
 
-The GH Copilot prompt-based recipes (cookbooks 6–10) require the GitHub Copilot CLI extension:
+The recipes require the standalone [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli):
 
 ```bash
-# Install the GitHub CLI if you don't have it
-brew install gh          # macOS
-winget install GitHub.cli # Windows
+# Install on any platform with Node.js 22 or later
+npm install -g @github/copilot
 
-# Install the Copilot CLI extension
-gh extension install github/gh-copilot
-
-# Verify it works
-gh copilot --version
+# Verify that the standalone CLI supports custom agents
+copilot --help
 ```
 
-> The `copilot` command used in the recipes is an alias for `gh copilot`. If your shell doesn't have the alias, use `gh copilot` directly or create one:
-> ```bash
-> alias copilot="gh copilot"
-> ```
-
-> **Tip:** For best results with wiqd agent scaffolding, use **Opus 4.8** or **5.6 Terra** as your Copilot model. Change it with:
-> ```bash
-> gh copilot config set model opus-4.8
-> ```
-> To see all available models: `gh copilot config list-models`
+Confirm that the help output includes the `--agent` option before continuing. If it does not, check which executable your shell resolves for `copilot`, then reinstall the standalone CLI.
 
 ### 4. Sign in to your Microsoft 365 account
 

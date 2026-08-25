@@ -28,12 +28,6 @@ wiqd doctor
 
 **Checkpoint:** Node reports version 24 or later, and the other commands complete successfully.
 
-If `copilot` is not found but `gh copilot` works, create the alias used by this lab:
-
-```bash
-alias copilot="gh copilot"
-```
-
 ## Build the agent
 
 ### Step 2: Create the workspace

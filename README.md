@@ -6,7 +6,7 @@ Sample recipes for building M365 Copilot declarative agents using the [wiqd CLI]
 
 - **Node.js 24+** — [install via nvm](https://github.com/nvm-sh/nvm) or [fnm](https://github.com/Schniz/fnm)
 - **wiqd CLI** — `curl -fsSL https://aka.ms/wiqd/install.sh | bash`
-- **GitHub CLI + Copilot extension** — `brew install gh && gh extension install github/gh-copilot`
+- **GitHub Copilot CLI** — `npm install -g @github/copilot`
 - **Microsoft 365 account** with access to Copilot
 - **Azure subscription** for provisioning agents
 
