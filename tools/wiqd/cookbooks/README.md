@@ -49,7 +49,28 @@ Confirm that the help output includes the `--agent` option before continuing. If
 
 ### 4. Sign in to your Microsoft 365 account
 
-You need a Microsoft 365 account with access to Copilot and an Azure subscription for provisioning agents.
+You need a Microsoft 365 account with access to Copilot and an Azure subscription for provisioning declarative agents. Start an interactive sign-in:
+
+```bash
+wiqd auth login --interactive
+```
+
+On macOS and Linux, this normally opens your system browser. Sign in with the work or school account for the tenant where you want to provision the agent, then complete any consent or multi-factor authentication prompts. `wiqd` delegates authentication to its installed providers, so you may see more than one provider reported in the terminal.
+
+Confirm that the intended account is signed in:
+
+```bash
+wiqd auth status
+```
+
+If the status shows an account from the wrong tenant, sign out and repeat the interactive login, choosing the correct account in the browser:
+
+```bash
+wiqd auth logout
+wiqd auth login --interactive
+```
+
+See the [wiqd authentication guide](https://microsoft.github.io/wiqd/getting-started/authentication/) for provider details and troubleshooting.
 
 ### 5. Confirm everything is ready
 
@@ -71,6 +92,7 @@ This checks your environment for common issues (Node version, auth status, CLI v
 | 4 | [Mind Your Language agent](./declarative-agents/mind-your-language/README.md) | Declarative agent | Tone coach that rewrites passive-aggressive text |
 | 5 | [Zava Insurance agent (MCP)](./declarative-agents/zava-insurance/README.md) | Declarative agent | Connect to an MCP server for live insurance data |
 | 6 | [Demo Planning agent](./declarative-agents/demo-planning/README.md) | Declarative agent | Plan demos, workshops, hackathons, and presentations |
+| 7 | [Agent Evaluation](./declarative-agents/agent-evaluation/README.md) | Declarative agent | Generate, run, analyze, and improve an agent evaluation suite |
 
 > All recipes use GitHub Copilot CLI prompts (`--agent wiqd:wiqd`) and `wiqd` CLI commands.
 
