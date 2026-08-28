@@ -92,7 +92,7 @@ This checks your environment for common issues (Node version, auth status, CLI v
 | 4 | [Mind Your Language agent](./declarative-agents/mind-your-language/README.md) | Declarative agent | Tone coach that rewrites passive-aggressive text |
 | 5 | [Zava Insurance agent (MCP)](./declarative-agents/zava-insurance/README.md) | Declarative agent | Connect to an MCP server for live insurance data |
 | 6 | [Demo Planning agent](./declarative-agents/demo-planning/README.md) | Declarative agent | Plan demos, workshops, hackathons, and presentations |
-| 7 | [Agent Evaluation](./declarative-agents/agent-evaluation/README.md) | Declarative agent | Generate, run, analyze, and improve an agent evaluation suite |
+
 
 > All recipes use GitHub Copilot CLI prompts (`--agent wiqd:wiqd`) and `wiqd` CLI commands.
 
