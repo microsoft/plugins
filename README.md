@@ -20,4 +20,4 @@ Browse the full list of recipes in the [wiqd Cookbooks](tools/wiqd/cookbooks/REA
 
 > **Sample purposes only.** The agents and recipes in this repository are provided as samples for learning and demonstration purposes. They are not intended for production use. AI-generated responses may be inaccurate, incomplete, or inappropriate. Always review and validate agent behavior before sharing with end users.
 
-<img src="https://m365-visitor-stats.azurewebsites.net/copilot-camp/cookbooks" />
+<img src="https://m365-visitor-stats.azurewebsites.net/PluginCookbooks/README" />
