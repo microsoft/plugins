@@ -100,7 +100,7 @@ Provision this Copilot Cowork plugin.
 - [WIQD plugin authoring reference](https://microsoft.github.io/wiqd/getting-started/plugin-reference/)
 - [Microsoft Learn MCP Server overview](https://learn.microsoft.com/training/support/mcp)
 
-<img src="https://m365-visitor-stats.azurewebsites.net/copilot-camp/cookbooks/wiqd/microsoft-learn-mcp-plugin" />
+<img src="https://m365-visitor-stats.azurewebsites.net/PluginCookbooks/wiqd/plugins/microsoft-learn-mcp" />
 
 ---
 
