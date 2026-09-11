@@ -2,7 +2,7 @@
 
 Create a focused evaluation suite, run it, diagnose the weakest behavior, fix
 the agent rather than the test, and compare the next run. This recipe uses
-Wiqd's GitHub Copilot judge path, so Azure OpenAI credentials are not required
+WIQD's GitHub Copilot judge path, so Azure OpenAI credentials are not required
 unless you deliberately select the Azure judge.
 
 ## Before you start
@@ -24,7 +24,7 @@ copilot --agent wiqd:wiqd
 Enter:
 
 ```text
-Initialize Wiqd evals for this provisioned agent. Inspect the manifest,
+Initialize WIQD evals for this provisioned agent. Inspect the manifest,
 instructions, grounding sources, and actions. Propose a focused suite that
 covers every applicable Perceive, Reason, and Act behavior plus boundaries and
 failure handling. Show every proposed add or update as a diff and wait for my
@@ -43,7 +43,7 @@ rather than only generic starter prompts.
 Enter:
 
 ```text
-Run the eval suite with Wiqd using the GitHub Copilot judge and write a
+Run the eval suite with WIQD using the GitHub Copilot judge and write a
 timestamped HTML scorecard under .evals. Analyze failures by root cause:
 instruction, grounding, citation, tool selection, capability gap, or a genuinely
 incorrect eval. Report the weakest evaluator and the exact prompts that expose

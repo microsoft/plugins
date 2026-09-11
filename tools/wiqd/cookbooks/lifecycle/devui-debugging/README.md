@@ -1,6 +1,6 @@
 # Debug an agent in DevUI
 
-Launch Wiqd's local DevUI, send a real prompt, and inspect the full turn:
+Launch WIQD's local DevUI, send a real prompt, and inspect the full turn:
 matched and selected plugins, tool execution, grounding, citations, request
 identifiers, latency, raw JSON, and failures.
 
@@ -24,7 +24,7 @@ copilot --agent wiqd:wiqd
 Enter:
 
 ```text
-Enable the Wiqd devui preview flag with the supported config command. Read this
+Enable the WIQD devui preview flag with the supported config command. Read this
 project's provisioned title ID, then start DevUI for that agent. Use direct
 transport and open the browser. Do not modify or re-provision the agent.
 ```
@@ -36,7 +36,7 @@ transport and open the browser. Do not modify or re-provision the agent.
 For Zava Claims Guide, enter:
 
 ```text
-Use Wiqd DevUI ask to send "Summarize claim CN202504990" to this agent and open
+Use WIQD DevUI ask to send "Summarize claim CN202504990" to this agent and open
 the live turn. Then tell me which plugin and tool DevUI selected, whether the
 tool execution succeeded, and which request, conversation, and task IDs identify
 the run.
@@ -67,7 +67,7 @@ shows a real error or empty result instead of a success-shaped answer.
 When finished, enter:
 
 ```text
-Stop the running Wiqd DevUI and reset the devui feature flag to its default.
+Stop the running WIQD DevUI and reset the devui feature flag to its default.
 ```
 
 <img src="https://m365-visitor-stats.azurewebsites.net/PluginCookbooks/wiqd/lifecycle/devui-debugging" />

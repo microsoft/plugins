@@ -10,7 +10,7 @@ mail-enabled security group.
 - Complete [Getting started](../../README.md#getting-started).
 - Start in a validated declarative-agent project.
 - Obtain the exact email addresses of preview users or the mail address of a
-  security group. Wiqd does not resolve display names.
+  security group. WIQD does not resolve display names.
 - Confirm that your tenant permits app upload and sharing.
 
 ## Configure the shared environment
@@ -26,7 +26,7 @@ Enter:
 ```text
 Prepare this agent for a team preview in the dev environment. Inspect the
 existing environment configuration first. Create the dev environment through
-Wiqd if it does not exist, configure AGENT_SCOPE=shared without adding secrets,
+WIQD if it does not exist, configure AGENT_SCOPE=shared without adding secrets,
 and ensure shared-version handling is correct. Show me the resulting non-secret
 environment settings and stop before provisioning.
 ```

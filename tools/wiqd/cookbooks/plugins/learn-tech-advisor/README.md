@@ -26,7 +26,7 @@ Enter:
 ```text
 Upgrade this existing Microsoft Learn connector plugin into a technology
 advisor. Do not recreate or alter the connector endpoint. Use the supported
-Wiqd plugin add commands to add a skill named Technology Finder and a
+WIQD plugin add commands to add a skill named Technology Finder and a
 declarative agent component.
 
 Replace the generated skill template with a reusable decision workflow:

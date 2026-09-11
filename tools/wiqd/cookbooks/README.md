@@ -108,19 +108,7 @@ teach the new workflow instead of repeating scaffolding.
 | 4 | [Hill-climb agent quality with evals](./lifecycle/eval-hill-climb/README.md) | Quality workflow | Measure, diagnose, fix, and compare without weakening tests |
 | 5 | [Debug an agent in DevUI](./lifecycle/devui-debugging/README.md) | Debug workflow | Inspect tool selection, execution, grounding, citations, and failures |
 | 6 | [Deliver an agent to a team](./lifecycle/team-delivery/README.md) | Delivery workflow | Shared scope, package validation, and targeted sharing |
-| 7 | [Round-trip a plugin across formats](./plugins/plugin-portability/README.md) | Plugin lifecycle | Export and re-import Open Plugin, Claude, or Cursor formats |
-
-## Validate the cookbook catalog
-
-From the repository root:
-
-```bash
-node tools/wiqd/cookbooks/validate.mjs
-```
-
-The check verifies that every original recipe remains present, all seven new
-highlights are indexed, relative links resolve, and no new recipe contains a
-private tenant URL or concrete email address.
+| 7 | [Round-trip a plugin across formats](./plugins/plugin-portability/README.md) | Plugin lifecycle | Export and re-import Agent Plugin, Claude, or Cursor formats |
 
 > All recipes use GitHub Copilot CLI prompts (`--agent wiqd:wiqd`) and `wiqd` CLI commands.
 

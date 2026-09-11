@@ -1,7 +1,7 @@
 # Round-trip a plugin across formats
 
-Export a validated Wiqd plugin to the Open Plugin, Claude, and Cursor formats,
-then import the Open Plugin export into a fresh Wiqd project and validate that
+Export a validated WIQD plugin to the Agent Plugin, Claude, and Cursor formats,
+then import the Agent Plugin export into a fresh WIQD project and validate that
 the connector, skill, and declarative agent survived.
 
 ## Before you start
@@ -23,8 +23,8 @@ copilot --agent wiqd:wiqd
 Enter:
 
 ```text
-Validate this Wiqd plugin. If validation is clean, export it with the supported
-Wiqd plugin export command to all three formats: open-plugin, claude-plugin, and
+Validate this WIQD plugin. If validation is clean, export it with the supported
+WIQD plugin export command to all three formats: open-plugin, claude-plugin, and
 cursor-plugin. Put each format in its default export directory. Do not provision
 or change the source plugin.
 ```
@@ -39,8 +39,8 @@ Enter:
 
 ```text
 Import export/open-plugin into a new sibling project named
-<current-plugin-name>-roundtrip using the supported Wiqd plugin import command.
-Because this export came from Wiqd, reuse its round-trip privacy, terms, and
+<current-plugin-name>-roundtrip using the supported WIQD plugin import command.
+Because this export came from WIQD, reuse its round-trip privacy, terms, and
 agent metadata rather than inventing replacements. Show the imported plugin and
 run static validation. Compare its capability list with the source plugin.
 ```

@@ -70,7 +70,7 @@ Enter this prompt in the same Copilot session:
 ```text
 Add a remote MCP action to the Zava Insurance agent using
 https://zava-insurance-mcp.azurewebsites.net/mcp with no authentication. Use the
-supported Wiqd agent add action command and inspect the server's current tools
+supported WIQD agent add action command and inspect the server's current tools
 before updating the agent instructions.
 ```
 
