@@ -1,21 +1,22 @@
-# Ground a handbook agent in your SharePoint content
+# Ground an existing agent in your SharePoint content
 
-Build an agent that answers only from a SharePoint site or folder you are
-authorized to use. The recipe scopes access to the URL you provide, requires
-citations, and enables the platform control that discourages model knowledge.
+Upgrade an existing declarative agent so it answers only from a SharePoint site
+or folder you are authorized to use. This lab focuses on source scoping,
+citations, and grounded-only behavior instead of repeating project scaffolding.
 
 ## Before you start
 
 - Complete [Getting started](../../README.md#getting-started).
+- Start in an existing, statically validated declarative-agent project. The
+  [Zero to agent](../zero-to-agent/README.md) project is sufficient.
 - Choose one SharePoint site, library, or folder that your signed-in account can
   read.
 - Pick one fact that exists in the selected content and one question that the
-  content cannot answer. You will use both as tests.
-- Run from a parent directory where `handbook-guide` does not already exist.
+  content cannot answer.
 
-## Build the grounded agent
+## Add organizational grounding
 
-Start one interactive Copilot session:
+Start one interactive Copilot session from the existing agent project root:
 
 ```bash
 copilot --agent wiqd:wiqd
@@ -24,10 +25,10 @@ copilot --agent wiqd:wiqd
 Enter:
 
 ```text
-Create a declarative agent project named handbook-guide and make the generated
-project root the current working directory. Call the agent Handbook Guide.
-Before configuring grounding, ask me for the exact SharePoint site, library, or
-folder URL that I am authorized to use.
+I want to ground this existing agent in one SharePoint source. Inspect the
+current manifest and instructions, then ask me for the exact SharePoint site,
+library, or folder URL that I am authorized to use. Do not change the project
+until I provide it.
 ```
 
 When Copilot asks for the source, enter:
@@ -36,40 +37,36 @@ When Copilot asks for the source, enter:
 Use this SharePoint URL and no other tenant content:
 <paste your authorized SharePoint URL>
 
-Scope the OneDriveAndSharePoint capability to that URL. Upgrade the declarative
-agent schema if required, set discourage_model_knowledge to true, and instruct
-the agent to cite the document it used. If the source is unavailable or does
-not contain the answer, say so instead of guessing. Add conversation starters,
-run static validation, and stop before provisioning.
+Scope the OneDriveAndSharePoint capability to exactly that URL. Preserve the
+agent's existing purpose, upgrade the declarative-agent schema only if required,
+set discourage_model_knowledge to true, and update the instructions and
+conversation starters so answers cite the document used. If the source is
+unavailable or does not contain the answer, say so instead of guessing. Run
+static validation and stop before provisioning.
 ```
 
-**Checkpoint:** validation passes, the capability is scoped to exactly the URL
-you supplied, and no tenant-specific URL is copied from this cookbook.
+**Checkpoint:** validation passes, the existing agent retains its original
+purpose, and its new grounding scope contains only the URL you supplied.
 
-## Provision and test
+## Deploy the update
 
 Enter:
 
 ```text
-Provision Handbook Guide to the dev environment and show me its Microsoft 365
-Copilot launch URL.
+Provision the updated agent to its existing development environment and show me
+the Microsoft 365 Copilot launch URL.
 ```
 
 Open the returned URL and test:
 
 | Prompt | Expected behavior |
 |---|---|
-| Ask about the fact you selected before starting | Answers from the configured content and cites the source |
+| Ask about the fact selected before starting | Answers from the configured content and cites the source |
 | Ask for the title or summary of a document in the scoped folder | Retrieves only from the supplied location |
-| Ask the deliberately unanswerable question | States that the configured sources do not contain the answer |
+| Ask the deliberately unanswerable question | States that the configured source does not contain the answer |
 
-**Checkpoint:** the agent cites accessible SharePoint content and refuses to
-invent an answer when the content is silent.
-
-## Clean up
-
-Ask the same Copilot session to uninstall the dev environment, and approve the
-destructive action only after it names the resources that will be removed.
+**Checkpoint:** the added organizational grounding is observable without
+turning the recipe into another first-agent walkthrough.
 
 <img src="https://m365-visitor-stats.azurewebsites.net/PluginCookbooks/wiqd/declarative-agents/sharepoint-knowledge-agent" />
 

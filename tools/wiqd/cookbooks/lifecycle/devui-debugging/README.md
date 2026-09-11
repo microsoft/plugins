@@ -9,7 +9,7 @@ identifiers, latency, raw JSON, and failures.
 - Complete [Getting started](../../README.md#getting-started).
 - Start in a provisioned declarative-agent project.
 - For the richest tool trace, use
-  [Zava Claims Guide](../../declarative-agents/zava-claims-agent/README.md).
+  [Zava Insurance agent](../../declarative-agents/insurance-agent-mcp/README.md).
 - DevUI binds only to `127.0.0.1` and uses your existing Work IQ
   authentication.
 
