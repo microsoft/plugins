@@ -94,6 +94,21 @@ This checks your environment for common issues (Node version, auth status, CLI v
 | 6 | [Demo Planning agent](./declarative-agents/demo-planning-agent/README.md) | Declarative agent | Plan demos, workshops, hackathons, and presentations |
 | 7 | [Microsoft Learn MCP connector](./plugins/microsoft-learn-mcp/README.md) | Plugin | Create and test a first Cowork plugin with a public, no-auth MCP connector |
 
+## New highlight recipes
+
+These seven additions focus on capabilities that the original catalog does not
+cover. Several intentionally begin with an existing agent or plugin so they
+teach the new workflow instead of repeating scaffolding.
+
+| # | Recipe | Type | What it adds |
+|---|--------|------|--------------|
+| 1 | [Ground an existing agent in your SharePoint content](./declarative-agents/sharepoint-knowledge-agent/README.md) | Declarative agent | User-owned organizational grounding, citations, and grounded-only answers |
+| 2 | [Build a public web research agent](./declarative-agents/public-web-research-agent/README.md) | Declarative agent | Site-scoped research over current public sources |
+| 3 | [Upgrade the Learn connector into a technology advisor](./plugins/learn-tech-advisor/README.md) | Composite plugin | Reusable skill + declarative agent layered onto the existing connector |
+| 4 | [Hill-climb agent quality with evals](./lifecycle/eval-hill-climb/README.md) | Quality workflow | Measure, diagnose, fix, and compare without weakening tests |
+| 5 | [Debug an agent in DevUI](./lifecycle/devui-debugging/README.md) | Debug workflow | Inspect tool selection, execution, grounding, citations, and failures |
+| 6 | [Deliver an agent to a team](./lifecycle/team-delivery/README.md) | Delivery workflow | Shared scope, package validation, and targeted sharing |
+| 7 | [Round-trip a plugin across formats](./plugins/plugin-portability/README.md) | Plugin lifecycle | Export and re-import Agent Plugin, Claude, or Cursor formats |
 
 > All recipes use GitHub Copilot CLI prompts (`--agent wiqd:wiqd`) and `wiqd` CLI commands.
 

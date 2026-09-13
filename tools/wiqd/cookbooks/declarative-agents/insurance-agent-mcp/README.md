@@ -54,7 +54,9 @@ Start with a clean conversation:
 Enter this prompt in the same Copilot session:
 
 ```text
-Create a new declarative agent called Zava Insurance that helps users with insurance queries such as policy lookups, coverage questions, and claim status.
+Create a new declarative agent called Zava Insurance that helps users inspect
+claims, find contractors and inspectors, and perform controlled claim
+operations.
 ```
 
 Review and approve the proposed file changes.
@@ -66,7 +68,10 @@ Review and approve the proposed file changes.
 Enter this prompt in the same Copilot session:
 
 ```text
-Add an MCP server action to the Zava Insurance agent using this endpoint: https://zava-insurance-mcp.azurewebsites.net/mcp
+Add a remote MCP action to the Zava Insurance agent using
+https://zava-insurance-mcp.azurewebsites.net/mcp with no authentication. Use the
+supported WIQD agent add action command and inspect the server's current tools
+before updating the agent instructions.
 ```
 
 Review and approve the manifest changes.
@@ -76,8 +81,12 @@ Review and approve the manifest changes.
 Confirm the generated project includes:
 
 - The MCP endpoint `https://zava-insurance-mcp.azurewebsites.net/mcp`
-- An MCP action in the agent manifest
-- Instructions that use the available tools for policy, claim, and coverage requests
+- An MCP action in the agent manifest with `None` authentication
+- Read workflows using `show-claims-dashboard`, `show-claim-detail`,
+  `show-contractors`, `get-claim-summary`, and `list-inspectors`
+- Instructions that summarize the exact proposed change and wait for explicit
+  confirmation in a separate user turn before calling `update-claim-status`,
+  `update-inspection`, `update-purchase-order`, or `create-inspection`
 
 Ask Copilot to correct any missing configuration. Keep this Copilot session open for the remaining steps.
 
@@ -120,16 +129,16 @@ Provision the agent to the dev environment with wiqd.
 Enter this prompt in the same Copilot session:
 
 ```text
-Open the provisioned agent in Microsoft 365 Copilot with wiqd.
+Show me the Microsoft 365 Copilot launch URL for the provisioned dev agent.
 ```
 
 ## Try it
 
 | Prompt | Expected behavior |
 |---|---|
-| `What's the status of policy #12345?` | Calls the MCP server and returns policy details |
-| `Does my plan cover dental?` | Queries coverage through the MCP endpoint |
-| `I need to file a claim for water damage` | Starts a claim flow with the MCP tools |
+| `Summarize claim CN202504990.` | Calls `get-claim-summary` or `show-claim-detail` and reports the live demo result |
+| `Show preferred contractors for water damage.` | Calls `show-contractors` with the relevant filters |
+| `Change claim 1 to Closed and add a completion note.` | Describes the exact update and asks for confirmation without calling the write tool yet |
 
 ## Reset the lab
 
