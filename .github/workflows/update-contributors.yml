@@ -1,0 +1,47 @@
+name: Update contributors
+
+"on":
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-contributors
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Generate contributor table
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node tools/wiqd/cookbooks/update-contributors.mjs
+
+      - name: Commit contributor changes
+        run: |
+          git add tools/wiqd/cookbooks/README.md
+          if git diff --cached --quiet; then
+            echo "Contributor table is already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update contributors"
+          git push origin HEAD:main
