@@ -82,33 +82,38 @@ This checks your environment for common issues (Node version, auth status, CLI v
 
 ---
 
-## Recipes
+## Start with a guided recipe
 
-| # | Recipe | Type | What it does |
-|---|--------|------|--------------|
-| 1 | [Zero to agent, live in Copilot](./declarative-agents/zero-to-agent/README.md) | Declarative agent | Scaffold, provision, and open your first agent |
-| 2 | [Translator agent](./declarative-agents/translator-agent/README.md) | Declarative agent | Translate text into any language |
-| 3 | [Photobooth agent](./declarative-agents/photobooth-agent/README.md) | Declarative agent | Apply effects and create photobooth-style image composites |
-| 4 | [Mind Your Language agent](./declarative-agents/mind-your-language-agent/README.md) | Declarative agent | Tone coach that rewrites passive-aggressive text |
-| 5 | [Zava Insurance agent (MCP)](./declarative-agents/insurance-agent-mcp/README.md) | Declarative agent | Connect to an MCP server for live insurance data |
-| 6 | [Demo Planning agent](./declarative-agents/demo-planning-agent/README.md) | Declarative agent | Plan demos, workshops, hackathons, and presentations |
-| 7 | [Microsoft Learn MCP connector](./plugins/microsoft-learn-mcp/README.md) | Plugin | Create and test a first Cowork plugin with a public, no-auth MCP connector |
+New to wiqd? Begin with one of these self-contained recipes. Each takes you
+from setup to a working solution and shows you how to test its core behavior.
+You can use the resulting project as a starting point for the extension and
+lifecycle recipes in the next section.
 
-## New highlight recipes
+| Recipe | Type | What you'll build |
+|--------|------|-------------------|
+| [Zero to agent, live in Copilot](./declarative-agents/zero-to-agent/README.md) | Declarative agent | Scaffold, provision, and open your first agent |
+| [Translator agent](./declarative-agents/translator-agent/README.md) | Declarative agent | Translate text into any language |
+| [Photobooth agent](./declarative-agents/photobooth-agent/README.md) | Declarative agent | Apply effects and create photobooth-style image composites |
+| [Mind Your Language agent](./declarative-agents/mind-your-language-agent/README.md) | Declarative agent | Coach tone and rewrite passive-aggressive text |
+| [Zava Insurance agent (MCP)](./declarative-agents/insurance-agent-mcp/README.md) | Declarative agent | Connect an agent to an MCP server for live insurance data |
+| [Demo Planning agent](./declarative-agents/demo-planning-agent/README.md) | Declarative agent | Plan demos, workshops, hackathons, and presentations |
+| [Microsoft Learn MCP connector](./plugins/microsoft-learn-mcp/README.md) | Plugin | Create and test a plugin with a public, no-auth MCP connector |
 
-These seven additions focus on capabilities that the original catalog does not
-cover. Several intentionally begin with an existing agent or plugin so they
-teach the new workflow instead of repeating scaffolding.
+## Extend and improve your solution
 
-| # | Recipe | Type | What it adds |
-|---|--------|------|--------------|
-| 1 | [Ground an existing agent in your SharePoint content](./declarative-agents/sharepoint-knowledge-agent/README.md) | Declarative agent | User-owned organizational grounding, citations, and grounded-only answers |
-| 2 | [Build a public web research agent](./declarative-agents/public-web-research-agent/README.md) | Declarative agent | Site-scoped research over current public sources |
-| 3 | [Upgrade the Learn connector into a technology advisor](./plugins/learn-tech-advisor/README.md) | Composite plugin | Reusable skill + declarative agent layered onto the existing connector |
-| 4 | [Hill-climb agent quality with evals](./lifecycle/eval-hill-climb/README.md) | Quality workflow | Measure, diagnose, fix, and compare without weakening tests |
-| 5 | [Debug an agent in DevUI](./lifecycle/devui-debugging/README.md) | Debug workflow | Inspect tool selection, execution, grounding, citations, and failures |
-| 6 | [Deliver an agent to a team](./lifecycle/team-delivery/README.md) | Delivery workflow | Shared scope, package validation, and targeted sharing |
-| 7 | [Round-trip a plugin across formats](./plugins/plugin-portability/README.md) | Plugin lifecycle | Export and re-import Agent Plugin, Claude, or Cursor formats |
+Use these recipes to add capabilities or work on a later stage of the solution
+lifecycle. Some build on a specific guided recipe, while others work with any
+existing agent or plugin. Check **Start with** before you begin.
+
+| Recipe | Focus | Start with | What you'll learn |
+|--------|-------|------------|-------------------|
+| [Ground an existing agent in your SharePoint content](./declarative-agents/sharepoint-knowledge-agent/README.md) | Grounding | An existing declarative agent, such as [Zero to agent](./declarative-agents/zero-to-agent/README.md) | Scope organizational knowledge, require grounded answers, and verify citations |
+| [Build a public web research agent](./declarative-agents/public-web-research-agent/README.md) | Research | An existing declarative agent | Scope research to approved public sites and produce source-backed answers |
+| [Upgrade the Learn connector into a technology advisor](./plugins/learn-tech-advisor/README.md) | Composition | [Microsoft Learn MCP connector](./plugins/microsoft-learn-mcp/README.md) | Combine a reusable plugin skill with a declarative agent |
+| [Hill-climb agent quality with evals](./lifecycle/eval-hill-climb/README.md) | Evaluation | An existing working agent | Measure quality, diagnose failures, improve behavior, and compare results |
+| [Debug an agent in DevUI](./lifecycle/devui-debugging/README.md) | Debugging | An existing agent with a test scenario | Inspect tool selection, execution, grounding, citations, and failures |
+| [Deliver an agent to a team](./lifecycle/team-delivery/README.md) | Delivery | A validated agent | Validate a package, configure shared scope, and target distribution |
+| [Round-trip a plugin across formats](./plugins/plugin-portability/README.md) | Portability | An existing plugin | Export and re-import Agent Plugin, Claude, and Cursor formats |
 
 > All recipes use GitHub Copilot CLI prompts (`--agent wiqd:wiqd`) and `wiqd` CLI commands.
 
