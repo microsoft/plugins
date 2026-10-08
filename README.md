@@ -1,6 +1,11 @@
-# Copilot Agent Cookbooks
+# Copilot Plugin Cookbooks
 
-Sample recipes for building M365 Copilot declarative agents using the [wiqd CLI](https://microsoft.github.io/wiqd/) and GitHub Copilot CLI.
+Sample recipes for building plugins for Microsoft 365 Copilot using the [wiqd CLI](https://microsoft.github.io/wiqd/) and GitHub Copilot CLI.
+
+Each plugin brings together components that shape a Copilot experience: skills,
+connectors (including MCP connectors), and agents. A declarative agent is one
+type of agent component. These cookbooks show how to build, combine, and
+customize those components as complete plugins.
 
 ## Prerequisites
 
@@ -8,11 +13,11 @@ Sample recipes for building M365 Copilot declarative agents using the [wiqd CLI]
 - **wiqd CLI** — `curl -fsSL https://aka.ms/wiqd/install.sh | bash`
 - **GitHub Copilot CLI** — `npm install -g @github/copilot`
 - **Microsoft 365 account** with access to Copilot
-- **Azure subscription** for provisioning agents
+- **Azure subscription** for provisioning required resources
 
-## Cookbooks
+## Plugin cookbooks
 
-Browse the full list of recipes in the [wiqd Cookbooks](tools/wiqd/cookbooks/README.md).
+Browse the full list of plugin recipes in the [wiqd Cookbooks](tools/wiqd/cookbooks/README.md).
 
 ## Contributing
 
@@ -30,7 +35,7 @@ security vulnerabilities privately according to [SECURITY.md](SECURITY.md).
 
 > **wiqd is in preview.** Work IQ Dev Tools (wiqd) are currently in preview. Commands, APIs, and behaviors may change before the 1.0 release. See the [wiqd documentation](https://microsoft.github.io/wiqd/) for the latest information.
 
-> **Sample purposes only.** The agents and recipes in this repository are provided as samples for learning and demonstration purposes. They are not intended for production use. AI-generated responses may be inaccurate, incomplete, or inappropriate. Always review and validate agent behavior before sharing with end users.
+> **Sample purposes only.** The plugins, components, and recipes in this repository are provided as samples for learning and demonstration purposes. They are not intended for production use. AI-generated responses may be inaccurate, incomplete, or inappropriate. Always review and validate plugin behavior before sharing with end users.
 
 ## Trademarks
 

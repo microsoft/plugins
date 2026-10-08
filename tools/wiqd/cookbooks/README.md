@@ -1,4 +1,12 @@
-wiqd cookbooks are short, end-to-end recipes built around one clear outcome:
+# wiqd plugin cookbooks
+
+wiqd cookbooks are short, end-to-end recipes for building and improving plugins
+for Microsoft 365 Copilot. A plugin can bring together skills, connectors
+(including MCP connectors), and agents. A declarative agent is one type of
+agent component. Some recipes focus on one component, while others show how to
+combine them into a more capable plugin.
+
+Each recipe is built around one clear outcome:
 **build it → make it do something → make it safe → make it good → make it grounded.**
 
 ## Getting started
@@ -49,7 +57,7 @@ Confirm that the help output includes the `--agent` option before continuing. If
 
 ### 4. Sign in to your Microsoft 365 account
 
-You need a Microsoft 365 account with access to Copilot and an Azure subscription for provisioning declarative agents. Start an interactive sign-in:
+You need a Microsoft 365 account with access to Copilot and an Azure subscription for provisioning plugin components and required resources. Start an interactive sign-in:
 
 ```bash
 wiqd auth login --interactive
@@ -82,28 +90,29 @@ This checks your environment for common issues (Node version, auth status, CLI v
 
 ---
 
-## Start with a guided recipe
+## Start with a guided plugin recipe
 
 New to wiqd? Begin with one of these self-contained recipes. Each takes you
-from setup to a working solution and shows you how to test its core behavior.
-You can use the resulting project as a starting point for the extension and
+from setup to a working plugin and shows you how to test its core behavior.
+You can use the resulting plugin project as a starting point for the extension and
 lifecycle recipes in the next section.
 
-| Recipe | Type | What you'll build |
-|--------|------|-------------------|
+| Recipe | Primary component | What you'll build |
+|--------|-------------------|-------------------|
 | [Zero to agent, live in Copilot](./declarative-agents/zero-to-agent/README.md) | Declarative agent | Scaffold, provision, and open your first agent |
 | [Translator agent](./declarative-agents/translator-agent/README.md) | Declarative agent | Translate text into any language |
 | [Photobooth agent](./declarative-agents/photobooth-agent/README.md) | Declarative agent | Apply effects and create photobooth-style image composites |
 | [Mind Your Language agent](./declarative-agents/mind-your-language-agent/README.md) | Declarative agent | Coach tone and rewrite passive-aggressive text |
 | [Zava Insurance agent (MCP)](./declarative-agents/insurance-agent-mcp/README.md) | Declarative agent | Connect an agent to an MCP server for live insurance data |
 | [Demo Planning agent](./declarative-agents/demo-planning-agent/README.md) | Declarative agent | Plan demos, workshops, hackathons, and presentations |
-| [Microsoft Learn MCP connector](./plugins/microsoft-learn-mcp/README.md) | Plugin | Create and test a plugin with a public, no-auth MCP connector |
+| [Microsoft Learn MCP connector](./plugins/microsoft-learn-mcp/README.md) | Connector (MCP) | Create and test a plugin with a public, no-auth MCP connector |
 
-## Extend and improve your solution
+## Extend and improve your plugin
 
-Use these recipes to add capabilities or work on a later stage of the solution
-lifecycle. Some build on a specific guided recipe, while others work with any
-existing agent or plugin. Check **Start with** before you begin.
+Use these recipes to add components and capabilities or work on a later stage
+of the plugin lifecycle. Some build on a specific guided recipe, while others
+work with any existing plugin or declarative-agent component. Check
+**Start with** before you begin.
 
 | Recipe | Focus | Start with | What you'll learn |
 |--------|-------|------------|-------------------|
