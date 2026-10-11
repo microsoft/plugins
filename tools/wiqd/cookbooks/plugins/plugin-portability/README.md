@@ -14,7 +14,9 @@ the connector, skill, and declarative agent survived.
 
 ## Export the plugin
 
-From the validated plugin root, start one interactive Copilot session:
+From the validated plugin root, start one interactive Copilot session. In the
+GitHub Copilot app, open the **Default agent** selector and choose **wiqd**. If
+you prefer the CLI, run:
 
 ```bash
 copilot --agent wiqd:wiqd

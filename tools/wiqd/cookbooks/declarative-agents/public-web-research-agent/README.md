@@ -12,7 +12,8 @@ site-scoped web grounding without private tenant content.
 
 ## Build and validate
 
-Start one interactive Copilot session:
+Start one interactive Copilot session. In the GitHub Copilot app, open the
+**Default agent** selector and choose **wiqd**. If you prefer the CLI, run:
 
 ```bash
 copilot --agent wiqd:wiqd

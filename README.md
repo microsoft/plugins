@@ -1,6 +1,8 @@
 # Copilot Plugin Cookbooks
 
-Sample recipes for building plugins for Microsoft 365 Copilot using the [wiqd CLI](https://microsoft.github.io/wiqd/) and GitHub Copilot CLI.
+Sample recipes for building plugins for Microsoft 365 Copilot using the
+[wiqd CLI](https://microsoft.github.io/wiqd/) with the GitHub Copilot app or
+GitHub Copilot CLI.
 
 Each plugin brings together components that shape a Copilot experience: skills,
 connectors (including MCP connectors), and agents. A declarative agent is one
@@ -11,7 +13,9 @@ customize those components as complete plugins.
 
 - **Node.js 24+** — [install via nvm](https://github.com/nvm-sh/nvm) or [fnm](https://github.com/Schniz/fnm)
 - **wiqd CLI** — `curl -fsSL https://aka.ms/wiqd/install.sh | bash`
-- **GitHub Copilot CLI** — `npm install -g @github/copilot`
+- **GitHub Copilot app or CLI** — in the app, choose **wiqd** from the
+  **Default agent** selector; for the CLI, run
+  `npm install -g @github/copilot`, then `copilot --agent wiqd:wiqd`
 - **Microsoft 365 account** with access to Copilot
 - **Azure subscription** for provisioning required resources
 

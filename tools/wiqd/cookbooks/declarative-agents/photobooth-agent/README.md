@@ -3,7 +3,9 @@
 Build and open a Microsoft 365 Copilot agent that turns uploaded images into photobooth-style composites. This README is organized like a notebook: run one cell at a time, confirm its checkpoint, and then continue.
 
 > [!NOTE]
-> Markdown cannot execute commands directly. Use the copy button on each code block, paste the command into a terminal, and keep the same Copilot session open for all remaining steps.
+> Markdown cannot execute commands directly. Run terminal commands in a
+> terminal, enter prompts in the GitHub Copilot app or CLI, and keep the same
+> Copilot conversation open for all remaining steps.
 
 ## Before you start
 
@@ -11,7 +13,7 @@ You need:
 
 - Node.js 24 or later
 - `wiqd` installed and signed in
-- GitHub Copilot CLI available as `copilot`
+- Access to the GitHub Copilot app or GitHub Copilot CLI
 - Permission to provision an agent to a dev environment
 
 ### Step 1: Check the environment
@@ -22,11 +24,13 @@ You need:
 ```bash
 node --version
 wiqd --version
-copilot --version
 wiqd doctor
 ```
 
-**Checkpoint:** Node reports version 24 or later, and the other commands complete successfully.
+If you plan to use the CLI, also run `copilot --version`.
+
+**Checkpoint:** Node reports version 24 or later, and the commands for your
+chosen workflow complete successfully.
 
 ## Build the agent
 
@@ -37,6 +41,9 @@ mkdir -p photobooth-agent && cd photobooth-agent
 ```
 
 ### Step 3: Start Copilot
+
+In the GitHub Copilot app, open the **Default agent** selector and choose
+**wiqd**. If you prefer the CLI, run:
 
 ```bash
 copilot --agent wiqd:wiqd

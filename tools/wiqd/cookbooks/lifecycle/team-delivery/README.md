@@ -15,7 +15,9 @@ mail-enabled security group.
 
 ## Configure the shared environment
 
-Start one interactive Copilot session from the project root:
+Start one interactive Copilot session from the project root. In the GitHub
+Copilot app, open the **Default agent** selector and choose **wiqd**. If you
+prefer the CLI, run:
 
 ```bash
 copilot --agent wiqd:wiqd

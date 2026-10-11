@@ -15,7 +15,9 @@ unless you deliberately select the Azure judge.
 
 ## Initialize a focused suite
 
-Start one interactive Copilot session from the agent project root:
+Start one interactive Copilot session from the agent project root. In the
+GitHub Copilot app, open the **Default agent** selector and choose **wiqd**. If
+you prefer the CLI, run:
 
 ```bash
 copilot --agent wiqd:wiqd
