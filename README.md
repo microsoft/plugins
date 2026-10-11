@@ -1,27 +1,49 @@
-# Copilot Plugin Cookbooks
+# Microsoft 365 Copilot plugin samples and cookbooks
 
-Sample recipes for building plugins for Microsoft 365 Copilot using the
-[wiqd CLI](https://microsoft.github.io/wiqd/) with the GitHub Copilot app or
-GitHub Copilot CLI.
+This repository provides samples and guided cookbooks for building plugins and
+their components for Microsoft 365 Copilot.
 
-Each plugin brings together components that shape a Copilot experience: skills,
-connectors (including MCP connectors), and agents. A declarative agent is one
-type of agent component. These cookbooks show how to build, combine, and
-customize those components as complete plugins.
+A plugin can combine connectors, skills, and agents into a complete Copilot
+experience. Use the samples to explore working implementations, then follow the
+WIQD cookbooks to build, test, improve, and deliver your own plugins.
 
-## Prerequisites
+## What's in this repository
 
-- **Node.js 24+** — [install via nvm](https://github.com/nvm-sh/nvm) or [fnm](https://github.com/Schniz/fnm)
-- **wiqd CLI** — `curl -fsSL https://aka.ms/wiqd/install.sh | bash`
-- **GitHub Copilot app or CLI** — in the app, choose **wiqd** from the
-  **Default agent** selector; for the CLI, run
-  `npm install -g @github/copilot`, then `copilot --agent wiqd:wiqd`
-- **Microsoft 365 account** with access to Copilot
-- **Azure subscription** for provisioning required resources
+| Content | Status | Explore |
+|---------|--------|---------|
+| Plugin samples | Two available | [Browse plugin samples](samples/plugins/) |
+| Connector samples | Coming soon | Standalone connector samples will be added to `samples/connectors/` |
+| Skill samples | Coming soon | Standalone skill samples will be added to `samples/skills/` |
+| WIQD cookbooks | Available | [Browse WIQD cookbooks](tools/wiqd/cookbooks/README.md) |
 
-## Plugin cookbooks
+## Plugin samples
 
-Browse the full list of plugin recipes in the [wiqd Cookbooks](tools/wiqd/cookbooks/README.md).
+| Sample | Components | What it demonstrates |
+|--------|------------|----------------------|
+| [Microsoft Learn Helper](samples/plugins/microsoft-learn-plugin/README.md) | Microsoft Learn MCP connector | A plugin that searches and reads current official Microsoft documentation and code samples through the public Microsoft Learn MCP server |
+| [Retirement Radar](samples/plugins/retirement-radar-plugin/README.md) | Microsoft Learn MCP connector and Retirement Radar skill | A plugin that checks code, scripts, configuration, and architecture notes for deprecated or retired Microsoft technologies and recommends supported replacements |
+
+More plugin samples are planned. Standalone connector and skill samples are
+coming soon.
+
+## WIQD cookbooks
+
+The [WIQD cookbooks](tools/wiqd/cookbooks/README.md) are short, end-to-end
+recipes for creating and improving plugins with the
+[wiqd CLI](https://microsoft.github.io/wiqd/). They cover declarative agents,
+MCP connectors, skills, grounding, evaluation, debugging, portability, and team
+delivery.
+
+You can follow the cookbooks with the GitHub Copilot app or GitHub Copilot CLI:
+
+- **GitHub Copilot app:** open the **Default agent** selector and choose
+  **wiqd**.
+- **GitHub Copilot CLI:** install it with
+  `npm install -g @github/copilot`, then run
+  `copilot --agent wiqd:wiqd`.
+
+See the [cookbook getting started guide](tools/wiqd/cookbooks/README.md#getting-started)
+for Node.js, WIQD, Microsoft 365, authentication, and Azure requirements.
 
 ## Contributing
 
