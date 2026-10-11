@@ -15,7 +15,9 @@ not repeat endpoint discovery or tool-description authoring.
 
 ## Add the reusable skill and agent
 
-Start one interactive Copilot session from the connector plugin root:
+Start one interactive Copilot session from the connector plugin root. In the
+GitHub Copilot app, open the **Default agent** selector and choose **wiqd**. If
+you prefer the CLI, run:
 
 ```bash
 copilot --agent wiqd:wiqd

@@ -41,9 +41,15 @@ Verify the installation:
 wiqd --version
 ```
 
-### 3. Install GitHub Copilot CLI
+### 3. Choose how to use the WIQD Copilot agent
 
-The recipes require the standalone [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli):
+You can run these recipes in the GitHub Copilot app or the standalone
+[GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli).
+
+In the GitHub Copilot app, open the agent selector labeled **Default agent** and
+choose **wiqd**. No CLI installation is required.
+
+If you prefer the CLI, install it:
 
 ```bash
 # Install on any platform with Node.js 22 or later
@@ -54,6 +60,12 @@ copilot --help
 ```
 
 Confirm that the help output includes the `--agent` option before continuing. If it does not, check which executable your shell resolves for `copilot`, then reinstall the standalone CLI.
+
+Start the WIQD agent with:
+
+```bash
+copilot --agent wiqd:wiqd
+```
 
 ### 4. Sign in to your Microsoft 365 account
 
@@ -124,7 +136,10 @@ work with any existing plugin or declarative-agent component. Check
 | [Deliver an agent to a team](./lifecycle/team-delivery/README.md) | Delivery | A validated agent | Validate a package, configure shared scope, and target distribution |
 | [Round-trip a plugin across formats](./plugins/plugin-portability/README.md) | Portability | An existing plugin | Export and re-import Agent Plugin, Claude, and Cursor formats |
 
-> All recipes use GitHub Copilot CLI prompts (`--agent wiqd:wiqd`) and `wiqd` CLI commands.
+> All recipes support the GitHub Copilot app and GitHub Copilot CLI. In the
+> app, choose **wiqd** from the **Default agent** selector. In the CLI, start
+> the agent with `copilot --agent wiqd:wiqd`. Recipes also use `wiqd` CLI
+> commands.
 
 ## Authors and contributors
 

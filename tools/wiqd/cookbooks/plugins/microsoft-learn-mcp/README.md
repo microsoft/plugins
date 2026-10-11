@@ -20,7 +20,8 @@ See [Getting started](../../README.md#getting-started) for installation and sign
 
 ### Step 1: Check the environment
 
-Start the WIQD Copilot agent:
+Start the WIQD Copilot agent. In the GitHub Copilot app, open the
+**Default agent** selector and choose **wiqd**. If you prefer the CLI, run:
 
 ```bash
 copilot --agent wiqd:wiqd
