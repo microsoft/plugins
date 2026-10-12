@@ -42,7 +42,7 @@ Check that my environment is ready to build and provision a plugin with WIQD. Co
 Enter this prompt in the same Copilot session:
 
 ```text
-Create a standalone plugin called Microsoft Learn Helper in a new microsoft-learn-helper directory, then make the generated plugin root the current working directory for this Copilot session.
+Create a standalone plugin called Microsoft Learn Helper.
 ```
 
 **Checkpoint:** the current working directory is the generated plugin root and contains `wiqd.plugin.json`, `m365agents.yml`, and `appPackage/manifest.json`.
