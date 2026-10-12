@@ -152,3 +152,5 @@ The skill depends on `https://learn.microsoft.com/api/mcp`. Confirm that your or
 ## Learn more
 
 - [Copilot Camp: Build your first Copilot Cowork plugin](https://microsoft.github.io/copilot-camp/pages/copilot-cowork/02-cowork-plugins/)
+
+<img src="https://m365-visitor-stats.azurewebsites.net/PluginCookbooks/samples/plugins/retirement-radar-plugin" />

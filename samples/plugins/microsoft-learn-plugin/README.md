@@ -95,3 +95,5 @@ for a guided, end-to-end build of this sample.
 This sample is for learning and demonstration purposes. Review the manifest,
 developer information, descriptions, icons, and tenant policies before sharing
 or publishing a derived plugin.
+
+<img src="https://m365-visitor-stats.azurewebsites.net/PluginCookbooks/samples/plugins/microsoft-learn-plugin" />
