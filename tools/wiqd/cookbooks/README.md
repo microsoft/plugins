@@ -118,6 +118,7 @@ lifecycle recipes in the next section.
 | [Zava Insurance agent (MCP)](./declarative-agents/insurance-agent-mcp/README.md) | Declarative agent | Connect an agent to an MCP server for live insurance data |
 | [Demo Planning agent](./declarative-agents/demo-planning-agent/README.md) | Declarative agent | Plan demos, workshops, hackathons, and presentations |
 | [Microsoft Learn MCP connector](./plugins/microsoft-learn-mcp/README.md) | Connector (MCP) | Create and test a plugin with a public, no-auth MCP connector |
+| [Learn Visual Explainer](./plugins/learn-visual-explainer/README.md) | Connector (MCP) + skill | Turn Microsoft Learn documentation into source-backed Mermaid diagrams |
 
 ## Extend and improve your plugin
 
