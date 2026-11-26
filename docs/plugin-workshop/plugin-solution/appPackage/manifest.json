@@ -1,0 +1,49 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.29/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.29",
+  "version": "1.0.0",
+  "id": "${{TEAMS_APP_ID}}",
+  "developer": {
+    "name": "Fabrikam IT",
+    "websiteUrl": "https://www.fabrikam.example/people-hub",
+    "privacyUrl": "https://www.fabrikam.example/privacy",
+    "termsOfUseUrl": "https://www.fabrikam.example/terms"
+  },
+  "icons": { "color": "color.png", "outline": "outline.png" },
+  "name": { "short": "Fabrikam Leave", "full": "Fabrikam People Hub - Leave" },
+  "description": {
+    "short": "Check leave balances, count working days for tax time, and request, withdraw or approve leave.",
+    "full": "Fabrikam People Hub brings leave into Microsoft 365 Copilot. Employees can check annual and personal leave balances, count working days in a financial year for their tax return, and create or delete leave requests using interactive forms. Managers can review and approve their team's leave. Data stays in the Fabrikam HR system and is fetched live for the signed-in user."
+  },
+  "accentColor": "#0F6CBD",
+  "agentConnectors": [
+    {
+      "id": "leave-quick-info",
+      "displayName": "Leave Quick Info",
+      "description": "Read-only quick answers from the Fabrikam HR system: the signed-in employee's annual and personal leave balance, and working days per Australian financial year for tax returns.",
+      "toolSource": {
+        "remoteMcpServer": {
+          "mcpServerUrl": "${{LEAVE_MCP_BASE_URL}}/quick",
+          "authorization": { "type": "OAuthPluginVault", "referenceId": "${{LEAVE_OAUTH_REFERENCE_ID}}" },
+          "mcpToolDescription": { "file": "tools/quick-tools.json" }
+        }
+      }
+    },
+    {
+      "id": "leave-management",
+      "displayName": "Leave Management",
+      "description": "Manage leave in the Fabrikam HR system: create a leave request (interactive form), delete a pending or future leave request (interactive list), and, for managers only, approve or reject their direct reports' leave.",
+      "toolSource": {
+        "remoteMcpServer": {
+          "mcpServerUrl": "${{LEAVE_MCP_BASE_URL}}/manage",
+          "authorization": { "type": "OAuthPluginVault", "referenceId": "${{LEAVE_OAUTH_REFERENCE_ID}}" },
+          "mcpToolDescription": { "file": "tools/manage-tools.json" }
+        }
+      }
+    }
+  ],
+  "agentSkills": [
+    { "folder": "skills/leave-quick-answers" },
+    { "folder": "skills/manage-leave" }
+  ]
+}

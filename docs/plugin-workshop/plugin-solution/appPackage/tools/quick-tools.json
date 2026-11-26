@@ -1,0 +1,48 @@
+{
+  "tools": [
+    {
+      "name": "get_leave_balance",
+      "title": "Get leave balance",
+      "description": "Returns the signed-in employee's current annual leave and personal leave balance for this financial year: opening balance, entitlement, days taken, days pending approval and days available.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "leaveType": {
+            "type": "string",
+            "enum": [
+              "annual",
+              "personal",
+              "all"
+            ],
+            "description": "Which balance to return. Defaults to all."
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_working_days",
+      "title": "Get working days for a financial year",
+      "description": "Counts the signed-in employee's working days in an Australian financial year (1 July - 30 June) for tax purposes, e.g. to support a work-from-home deduction. Working days = weekdays - public holidays - approved leave. Current financial year is counted up to today.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "financialYear": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}$",
+            "description": "Financial year in the form 2025-26. Defaults to the most recently completed financial year."
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false
+      }
+    }
+  ]
+}

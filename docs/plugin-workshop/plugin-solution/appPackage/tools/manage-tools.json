@@ -1,0 +1,109 @@
+{
+  "tools": [
+    {
+      "name": "create_leave_request",
+      "title": "Create leave request",
+      "description": "Creates an annual or personal leave request for the signed-in employee and routes it to their manager. If any field is missing, opens an interactive leave request form (pre-filled with whatever is known) so the user can complete and submit it. Always confirm dates with the user before calling with all fields.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "leaveType": {
+            "type": "string",
+            "enum": [
+              "annual",
+              "personal"
+            ],
+            "description": "annual or personal"
+          },
+          "startDate": {
+            "type": "string",
+            "description": "First day of leave, YYYY-MM-DD"
+          },
+          "endDate": {
+            "type": "string",
+            "description": "Last day of leave, YYYY-MM-DD (inclusive)"
+          },
+          "reason": {
+            "type": "string",
+            "maxLength": 200,
+            "description": "Short reason shown to the approver"
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "_meta": {
+        "ui": {
+          "resourceUri": "ui://fabrikam-leave/leave-request.html"
+        }
+      }
+    },
+    {
+      "name": "delete_leave_request",
+      "title": "Delete leave request",
+      "description": "Deletes (withdraws) one of the signed-in employee's own leave requests that is pending, or approved but not yet started. Without a requestId, opens an interactive list of the employee's open requests so they can pick one to delete. Confirm with the user before deleting.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "requestId": {
+            "type": "string",
+            "pattern": "^LR-\\d+$",
+            "description": "Leave request id, e.g. LR-1002. Omit to show the list."
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "_meta": {
+        "ui": {
+          "resourceUri": "ui://fabrikam-leave/manage-requests.html"
+        }
+      }
+    },
+    {
+      "name": "approve_leave_request",
+      "title": "Approve or reject leave (managers only)",
+      "description": "MANAGERS ONLY. Without a requestId, lists leave requests from the manager's direct reports that are waiting for a decision. With a requestId, approves (default) or rejects that request with an optional comment. Non-managers receive an authorization error.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "requestId": {
+            "type": "string",
+            "pattern": "^LR-\\d+$",
+            "description": "Leave request id to decide on. Omit to list pending approvals."
+          },
+          "decision": {
+            "type": "string",
+            "enum": [
+              "approve",
+              "reject"
+            ],
+            "description": "Defaults to approve"
+          },
+          "comment": {
+            "type": "string",
+            "maxLength": 200,
+            "description": "Note to the employee"
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    }
+  ]
+}
